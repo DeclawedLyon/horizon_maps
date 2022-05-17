@@ -1,6 +1,6 @@
 {
   "name": "horizon_mapper",
-  "homepage": "https://github.com/DeclawedLyon/horizon_maps",
+  "homepage": "https://declawedlyon.github.io/horizon_maps/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
