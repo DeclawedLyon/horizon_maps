@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/horizon_maps/static/css/main.c7d5ffce.css",
-    "main.js": "/horizon_maps/static/js/main.ca76f9d1.js",
+    "main.js": "/horizon_maps/static/js/main.753431f1.js",
     "static/js/787.6496d064.chunk.js": "/horizon_maps/static/js/787.6496d064.chunk.js",
     "static/media/logo.svg": "/horizon_maps/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/horizon_maps/index.html",
     "main.c7d5ffce.css.map": "/horizon_maps/static/css/main.c7d5ffce.css.map",
-    "main.ca76f9d1.js.map": "/horizon_maps/static/js/main.ca76f9d1.js.map",
+    "main.753431f1.js.map": "/horizon_maps/static/js/main.753431f1.js.map",
     "787.6496d064.chunk.js.map": "/horizon_maps/static/js/787.6496d064.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7d5ffce.css",
-    "static/js/main.ca76f9d1.js"
+    "static/js/main.753431f1.js"
   ]
 }
