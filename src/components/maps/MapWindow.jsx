@@ -47,8 +47,14 @@ const defaultCoords = () => {
 }
 
 function MapWindow(props) {
+  // use key is dev only code. it sets the google maps api key to either 
+  // a dev key set to my laptops IP, or a deployment key set to the final
+  // deployed websites http address
   const useKey = props.devMode ? devApiKey : apiKey
   const [cutPolygons, setCutPolygons] = useState([]);
+  
+  // useJsApiLoader returns true if the app can load a google maps object
+  // using the given api key
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: useKey
@@ -63,7 +69,7 @@ function MapWindow(props) {
   }, [])
 
   const loadPolygon = polygon => {
-    console.log("polygon: ", polygon);
+    console.log(`polygon: ${polygon.id} has loaded!`);
   }
 
   const onUnmount = React.useCallback(function callback(map) {
@@ -103,20 +109,6 @@ function MapWindow(props) {
         onUnmount={onUnmount}
       >
         {cutPolygons}
-        {/* {props.cutList.map(outline => {
-          return (
-            <Polygon
-              onLoad={loadPolygon}
-              paths={cutPolygons}
-              options={options}
-            />
-          )
-        })} */}
-        {/* <Polygon
-        onLoad={loadPolygon}
-        paths={nadenBaseballField}
-        options={options}
-        /> */}
         { /* Child components, such as markers, info windows, etc. */ }
         <></>
       </GoogleMap>

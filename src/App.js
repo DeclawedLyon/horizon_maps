@@ -3,19 +3,10 @@ import './App.css';
 import Navbar from './components/nav_elements/Navbar';
 import MapWindow from './components/maps/MapWindow';
 import CutsMenu from './components/interface_components/CutsMenu';
+import { useState } from 'react';
 
-function App() {
-  const devMode = true;
-   
-  const nadenCuts = [
-    'nadenBaseballField',
-    'nadenSouthOfBBallField',
-    'fireHallEast',
-    'parkingLotSouthSection',
-    'parkingLotNorthSection',
-    'ontarioDrHillSide'
-  ]
 
+function setDefaultCuts() {
   const newNadenCutList = [
     {
       locationName: 'nadenBaseballField',
@@ -114,20 +105,36 @@ function App() {
       ],
       lastCutDate: ''
     },
-    {
-      locationName: '',
-      polygonCoords: [
-        {},
-      ],
-      lastCutDate: ''
-    },
-    {
-      locationName: '',
-      polygonCoords: [
-        {},
-      ],
-      lastCutDate: ''
-    },
+    // {
+    //   locationName: '',
+    //   polygonCoords: [
+    //     {},
+    //   ],
+    //   lastCutDate: ''
+    // },
+    // {
+    //   locationName: '',
+    //   polygonCoords: [
+    //     {},
+    //   ],
+    //   lastCutDate: ''
+    // },
+  ]
+  return newNadenCutList
+}
+
+function App() {
+  const devMode = true;
+
+  const [cutList, setCutList] = useState(setDefaultCuts());
+   
+  const nadenCuts = [
+    'nadenBaseballField',
+    'nadenSouthOfBBallField',
+    'fireHallEast',
+    'parkingLotSouthSection',
+    'parkingLotNorthSection',
+    'ontarioDrHillSide'
   ]
   
   const nadenCutList = [
@@ -142,7 +149,7 @@ function App() {
       <Navbar />
       <MapWindow 
         devMode={devMode}
-        cutList={newNadenCutList}
+        cutList={cutList}
       />
       <CutsMenu cutList={nadenCutList}/>
     </div>
