@@ -10,8 +10,9 @@ export default function CutsMenu(props) {
   const renderCuts = (cutArr) => {
     console.log(cutArr);
     let cutElementArr = cutArr.map(cut => {
+      console.log(cut)
       return (
-        <CutInterface cutName={cut} />
+        <CutInterface cutName={cut.locationName} />
       )
     });
     setCuts(cutElementArr);

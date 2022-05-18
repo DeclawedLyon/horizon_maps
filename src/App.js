@@ -9,7 +9,7 @@ import { useState } from 'react';
 function setDefaultCuts() {
   const newNadenCutList = [
     {
-      locationName: 'nadenBaseballField',
+      locationName: 'Baseball Field',
       polygonCoords: [
         {lat: 48.43459930069949, lng: -123.41968549014572},
         {lat: 48.434594894435115, lng: -123.41938888555694},
@@ -23,10 +23,10 @@ function setDefaultCuts() {
         {lat: 48.43435477319516, lng: -123.4199069191618},
         {lat: 48.43459930069949, lng: -123.41968549014572}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date("Dec 15, 2021, 21:45:10")
     },
     {
-      locationName: 'nadenSouthOfBBallField',
+      locationName: 'Entrance Road',
       polygonCoords: [
         {lat: 48.433220067255604, lng: -123.42013400241261},
         {lat: 48.433097649335174, lng: -123.41817540960528},
@@ -38,10 +38,10 @@ function setDefaultCuts() {
         {lat: 48.43233959333703, lng: -123.42025464037539},
         {lat: 48.433220067255604, lng: -123.42013400241261}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date()
     },
     {
-      locationName: 'fireHallEast',
+      locationName: 'Fire Hall (East Side)',
       polygonCoords: [
         {lat: 48.43240551169887, lng: -123.42031850753217},
         {lat: 48.43192421851562, lng: -123.42037018940131},
@@ -58,10 +58,10 @@ function setDefaultCuts() {
         {lat: 48.43237809886612, lng: -123.42089502164961},
         {lat: 48.43240596064622, lng: -123.42031413342688}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date()
     },
     {
-      locationName: 'parkingLotSouthSection',
+      locationName: 'Parking Lot (South)',
       polygonCoords: [
         {lat: 48.434682150511534, lng: -123.41968803278945},
         {lat: 48.434844669976805, lng: -123.41943608127116},
@@ -69,10 +69,10 @@ function setDefaultCuts() {
         {lat: 48.43472858469751, lng: -123.41837928462495},
         {lat: 48.434682150511534, lng: -123.41968803278945}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date()
     },
     {
-      locationName: 'parkingLotNorthSection',
+      locationName: 'Parking Lot (North)',
       polygonCoords: [
         {lat: 48.43494250550318, lng: -123.41928152471407},
         {lat: 48.435064918978696, lng: -123.41903315243775},
@@ -80,10 +80,10 @@ function setDefaultCuts() {
         {lat: 48.43497546300637, lng: -123.41864994949718},
         {lat: 48.43494250550318, lng: -123.41928152471407}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date()
     },
     {
-      locationName: 'ontarioDrHillSide',
+      locationName: 'Ontario Dr Hillside',
       polygonCoords: [
         {lat: 48.43478713414014, long: -123.42056596419964},
         {lat: 48.43465530351046, long: -123.42035307367709},
@@ -103,7 +103,7 @@ function setDefaultCuts() {
         {lat: 48.434876590444055, long: -123.42036017002783},
         {lat: 48.43478713414014, long: -123.42056596419964}
       ],
-      lastCutDate: ''
+      lastCutDate: new Date()
     },
     // {
     //   locationName: '',
@@ -127,23 +127,7 @@ function App() {
   const devMode = true;
 
   const [cutList, setCutList] = useState(setDefaultCuts());
-   
-  const nadenCuts = [
-    'nadenBaseballField',
-    'nadenSouthOfBBallField',
-    'fireHallEast',
-    'parkingLotSouthSection',
-    'parkingLotNorthSection',
-    'ontarioDrHillSide'
-  ]
-  
-  const nadenCutList = [
-    'Parking Lot (North)',
-    'Parking Lot (South)',
-    'Baseball Field',
-    'Entrance Road',
-    'Fire Hall'
-  ]
+
   return (
     <div className="App">
       <Navbar />
@@ -151,7 +135,7 @@ function App() {
         devMode={devMode}
         cutList={cutList}
       />
-      <CutsMenu cutList={nadenCutList}/>
+      <CutsMenu cutList={cutList}/>
     </div>
   );
 }
