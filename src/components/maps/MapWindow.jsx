@@ -2,6 +2,7 @@ import React from 'react'
 import { GoogleMap, useJsApiLoader, Polygon } from '@react-google-maps/api'
 
 const apiKey = process.env.REACT_APP_API_KEY;
+const devApiKey = process.env.REACT_APP_API_KEY_2;
 // const { GoogleMap, LoadScript } = require("../../");
 // const ScriptLoaded = require("../../docs/ScriptLoaded").default;
 
@@ -117,10 +118,11 @@ const options = {
   zIndex: 1
 }
 
-function MapWindow() {
+function MapWindow(props) {
+  const useKey = props.devMode ? devApiKey : apiKey
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: apiKey
+    googleMapsApiKey: useKey
   })
 
   const [map, setMap] = React.useState(null)
