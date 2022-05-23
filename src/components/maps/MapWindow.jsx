@@ -62,13 +62,14 @@ function MapWindow(props) {
   const dateTest = (date) => {
     const today = new Date();
     const timeDifference = today.getTime() - date.getTime();
-    const differenceInDays = timeDifference / (1000 * 60 * 60 * 24)
+    const differenceInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+    console.log(differenceInDays , "between", today, 'and', date)
     if (differenceInDays > 14) {
       console.log('need to cut!!')
       return {
         result: 'overdue'
       }
-    } else if (14 > differenceInDays && differenceInDays < 0) {
+    } else if (14 > differenceInDays && differenceInDays > 1) {
       console.log('cut soon')
       return {
         result: 'due'
@@ -101,9 +102,9 @@ function MapWindow(props) {
       } 
       if (result === 'due') {
         polygonOptions = {
-          fillColor: 'lightblue',
+          fillColor: 'orange',
           fillOpacity: 0.5,
-          strokeColor: "red",
+          strokeColor: "orange",
           strokeOpacity: 1,
           strokeWeight: 2,
           clickable: false,
@@ -115,9 +116,9 @@ function MapWindow(props) {
       } 
       if (result === 'cut_recently') {
         polygonOptions = {
-          fillColor: 'lightblue',
+          fillColor: 'lightgreen',
           fillOpacity: 0.5,
-          strokeColor: "red",
+          strokeColor: "green",
           strokeOpacity: 1,
           strokeWeight: 2,
           clickable: false,

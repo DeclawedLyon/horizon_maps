@@ -25,8 +25,8 @@ function setDefaultCuts() {
         {lat: 48.43435477319516, lng: Number(-123.4199069191618)},
         {lat: 48.43459930069949, lng: Number(-123.41968549014572)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date("May 20, 2022, 21:45:10"),
+      lastTrimDate: new Date('May 20, 2022, 12:45:10')
     },
     {
       locationName: 'Entrance Road',
@@ -41,8 +41,8 @@ function setDefaultCuts() {
         {lat: 48.43233959333703, lng: Number(-123.42025464037539)},
         {lat: 48.433220067255604, lng:Number( -123.42013400241261)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
     },
     {
       locationName: 'Fire Hall (East Side)',
@@ -62,8 +62,8 @@ function setDefaultCuts() {
         {lat: 48.43237809886612, lng: Number(-123.42089502164961)},
         {lat: 48.43240596064622, lng: Number(-123.42031413342688)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date('May 1, 2022, 12:45:10'),
+      lastTrimDate: new Date('May 1, 2022, 12:45:10')
     },
     {
       locationName: 'Parking Lot (South)',
@@ -74,8 +74,8 @@ function setDefaultCuts() {
         {lat: 48.43472858469751, lng: Number(-123.41837928462495)},
         {lat: 48.434682150511534, lng:Number( -123.41968803278945)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date("May 20, 2022, 21:45:10"),
+      lastTrimDate: new Date("May 20, 2022, 21:45:10")
     },
     {
       locationName: 'Parking Lot (North)',
@@ -86,8 +86,8 @@ function setDefaultCuts() {
         {lat: 48.43497546300637, lng: Number(-123.41864994949718)},
         {lat: 48.43494250550318, lng: Number(-123.41928152471407)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
     },
     {
       locationName: 'Ontario Dr Hillside',
@@ -110,8 +110,8 @@ function setDefaultCuts() {
         {lat: 48.434876590444055, lng:Number( -123.42036017002783)},
         {lat: 48.43478713414014, lng: Number(-123.42056596419964)}
       ],
-      lastCutDate: new Date("Dec 15, 2021, 21:45:10"),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date('May 1, 2022, 12:45:10'),
+      lastTrimDate: new Date('May 1, 2022, 12:45:10')
     },
     {
       locationName: `General's House(1)`,
@@ -125,8 +125,8 @@ function setDefaultCuts() {
         {lat: 48.436701223994994, lng: Number(-123.42023311043663)},
         {lat: 48.436767084664204, lng: Number(-123.42031919113545)}
       ],
-      lastCutDate: new Date('May 23, 2022, 12:45:10'),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10'),
+      lastCutDate: new Date("May 20, 2022, 21:45:10"),
+      lastTrimDate: new Date("May 20, 2022, 21:45:10"),
     },
     {
       locationName: `General's House(2)`,
@@ -140,8 +140,8 @@ function setDefaultCuts() {
         {lat: 48.436741293083635, lng: Number(-123.4203650082816)},
         {lat: 48.436742895519835, lng: Number(-123.42035416798281)}
       ],
-      lastCutDate: new Date('May 23, 2022, 12:45:10'),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date('May 1, 2022, 12:45:10'),
+      lastTrimDate: new Date('May 1, 2022, 12:45:10')
     },
     {
       locationName: `General's House(3)`,
@@ -154,8 +154,8 @@ function setDefaultCuts() {
         {lat: 48.43661509837567, lng: Number(-123.42013800514842)},
         {lat: 48.43668694649599, lng: Number(-123.42020742506682)}
       ],
-      lastCutDate: new Date('May 23, 2022, 12:45:10'),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
     },
     {
       locationName: `General's House(4)`,
@@ -171,8 +171,8 @@ function setDefaultCuts() {
         {lat: 48.43661223950808, lng: Number(-123.42040508503446)},
         {lat: 48.43663766606545, lng: Number(-123.42041707322039)}
       ],
-      lastCutDate: new Date('May 23, 2022, 12:45:10'),
-      lastTrimDate: new Date('May 23, 2022, 12:45:10')
+      lastCutDate: new Date("May 20, 2022, 21:45:10"),
+      lastTrimDate: new Date("May 20, 2022, 21:45:10")
     }
     // {
     //   locationName: '',
@@ -217,7 +217,7 @@ function App() {
           return {
             locationName: cut.locationName,
             polygonCoords: cut.polygonCoords,
-            lastCutDate: new Date("May 20, 2022, 21:45:10")
+            lastCutDate: new Date('May 20, 2022,12:40:01')
           }
         } else {
           return cut
@@ -225,6 +225,20 @@ function App() {
       })
       setCutList(newCutList)
     }, 3000)
+    setTimeout(() => {
+      const newCutList = cutList.map(cut => {
+        if (cut.locationName === cutName) {
+          return {
+            locationName: cut.locationName,
+            polygonCoords: cut.polygonCoords,
+            lastCutDate: new Date("jan 1, 2022, 21:45:10")
+          }
+        } else {
+          return cut
+        }
+      })
+      setCutList(newCutList)
+    }, 7000)
   }
 
   return (
