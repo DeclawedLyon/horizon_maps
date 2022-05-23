@@ -5,6 +5,7 @@ import "./tailwind.generated.css"
 import BottomNav from './components/nav_elements/BottomNav';
 import MapWindow from './components/maps/MapWindow';
 import CutsMenu from './components/interface_components/CutsMenu';
+import UploadImagePopup from './components/popups/UploadImagePopup'
 import { useState } from 'react';
 
 
@@ -288,9 +289,10 @@ function setDefaultCuts() {
 }
 
 function App() {
-  const devMode = true;
+  const devMode = false;
 
   const [cutList, setCutList] = useState(setDefaultCuts());
+  const [showImagePopup, setShowImagePopup] = useState(false)
 
   const updateCutDate = (cutName) => {
     console.log('there is a bug in updatecuts that must be fixed. cuts are currently updated by mapping the state and resetting state to new mapped obj. Should use prevState instead to prevent overwritten dates');
@@ -348,8 +350,12 @@ function App() {
       <CutsMenu
         cutList={cutList}
         updateCutDate={updateCutDate}
+        setShowImagePopup={setShowImagePopup}
       />
       <BottomNav />
+      {showImagePopup && <UploadImagePopup 
+        setShowImagePopup={setShowImagePopup}
+      />}
     </div>
   );
 }

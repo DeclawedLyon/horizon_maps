@@ -18,6 +18,7 @@ export default function CutsMenu(props) {
           key={`--${x}-${cut.locationName}`} 
           cutName={cut.locationName} 
           updateCutDate={props.updateCutDate}
+          setShowImagePopup={props.setShowImagePopup}
         />
       )
     });

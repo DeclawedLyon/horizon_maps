@@ -1,0 +1,26 @@
+#upload-image-popup {
+  color: red;
+  position: absolute;
+  top: 0;
+  width: 60vw;
+  height: 40vh;
+  border: 2px solid black;
+  margin: auto;
+  z-index: 1;
+}
+/* #upload-image-popup::before {
+  position: absolute;
+  content: 'test';
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: black;
+  background-color: #0a0a0a31;
+  z-index: 0;
+} */
+#popup-content-window {
+  z-index: 10;
+}
