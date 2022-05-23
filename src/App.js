@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/nav_elements/Navbar';
+import "./tailwind.generated.css"
+// import Navbar from './components/nav_elements/Navbar';
 import BottomNav from './components/nav_elements/BottomNav';
 import MapWindow from './components/maps/MapWindow';
 import CutsMenu from './components/interface_components/CutsMenu';
@@ -125,7 +126,7 @@ function setDefaultCuts() {
 }
 
 function App() {
-  const devMode = false;
+  const devMode = true;
 
   const [cutList, setCutList] = useState(setDefaultCuts());
 
@@ -148,6 +149,7 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
+      {/* <h1 className='bg-white-100 text-blue-300'>Hello</h1> */}
       <MapWindow 
         devMode={devMode}
         cutList={cutList}

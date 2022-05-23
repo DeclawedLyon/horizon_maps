@@ -139,7 +139,7 @@ function MapWindow(props) {
   useEffect(() => {
     const formattedCutElements = formatCutList(props.cutList);
     setCutPolygons(formattedCutElements);
-  }, [])
+  }, [props.cutList])
 
   return isLoaded ? (
       <GoogleMap
