@@ -301,20 +301,23 @@ function App() {
         return {
           locationName: cut.locationName,
           polygonCoords: cut.polygonCoords,
-          lastCutDate: new Date()
+          lastCutDate: new Date(),
+          lastTrimDate: cut.lastTrimDate
         }
       } else {
         return cut
       }
     })
     setCutList(newCutList);
+    // ================================ TEST CODE ================================
     setTimeout(() => {
       const newCutList = cutList.map(cut => {
         if (cut.locationName === cutName) {
           return {
             locationName: cut.locationName,
             polygonCoords: cut.polygonCoords,
-            lastCutDate: new Date('May 20, 2022,12:40:01')
+            lastCutDate: new Date('May 20, 2022,12:40:01'),
+            lastTrimDate: cut.lastTrimDate
           }
         } else {
           return cut
@@ -328,7 +331,55 @@ function App() {
           return {
             locationName: cut.locationName,
             polygonCoords: cut.polygonCoords,
-            lastCutDate: new Date("jan 1, 2022, 21:45:10")
+            lastCutDate: new Date("jan 1, 2022, 21:45:10"),
+            lastTrimDate: cut.lastTrimDate
+          }
+        } else {
+          return cut
+        }
+      })
+      setCutList(newCutList)
+    }, 7000)
+  }
+  const updateTrimDate = (cutName) => {
+    console.log('Update Trims');
+    const newCutList = cutList.map(cut => {
+      if (cut.locationName === cutName) {
+        return {
+          locationName: cut.locationName,
+          polygonCoords: cut.polygonCoords,
+          lastCutDate: cut.lastCutDate,
+          lastTrimDate: new Date()
+        }
+      } else {
+        return cut
+      }
+    })
+    setCutList(newCutList);
+    // ================================ TEST CODE ================================
+    setTimeout(() => {
+      const newCutList = cutList.map(cut => {
+        if (cut.locationName === cutName) {
+          return {
+            locationName: cut.locationName,
+            polygonCoords: cut.polygonCoords,
+            lastCutDate: cut.lastCutDate,
+            lastTrimDate: new Date('May 20, 2022,12:40:01')
+          }
+        } else {
+          return cut
+        }
+      })
+      setCutList(newCutList)
+    }, 3000)
+    setTimeout(() => {
+      const newCutList = cutList.map(cut => {
+        if (cut.locationName === cutName) {
+          return {
+            locationName: cut.locationName,
+            polygonCoords: cut.polygonCoords,
+            lastCutDate: cut.lastCutDate,
+            lastTrimDate: new Date("jan 1, 2022, 21:45:10")
           }
         } else {
           return cut
@@ -350,6 +401,7 @@ function App() {
       <CutsMenu
         cutList={cutList}
         updateCutDate={updateCutDate}
+        updateTrimDate={updateTrimDate}
         setShowImagePopup={setShowImagePopup}
       />
       <BottomNav />

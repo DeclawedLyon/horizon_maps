@@ -84,50 +84,66 @@ function MapWindow(props) {
 
   const formatCutList = (cutArr) => {
     const formattedCuts = cutArr.map((cutObj, x) => {
-      const result = dateTest(cutObj.lastCutDate).result
-      let polygonOptions = {};
-      if (result === 'overdue') {
-        polygonOptions = {
-          fillColor: 'red',
-          fillOpacity: 0.5,
-          strokeColor: "red",
-          strokeOpacity: 1,
-          strokeWeight: 2,
-          clickable: false,
-          draggable: false,
-          editable: false,
-          geodesic: false,
-          zIndex: 1
-        }
-      } 
-      if (result === 'due') {
-        polygonOptions = {
-          fillColor: 'orange',
-          fillOpacity: 0.5,
-          strokeColor: "orange",
-          strokeOpacity: 1,
-          strokeWeight: 2,
-          clickable: false,
-          draggable: false,
-          editable: false,
-          geodesic: false,
-          zIndex: 1
-        }
-      } 
-      if (result === 'cut_recently') {
-        polygonOptions = {
-          fillColor: 'lightgreen',
-          fillOpacity: 0.5,
-          strokeColor: "green",
-          strokeOpacity: 1,
-          strokeWeight: 2,
-          clickable: false,
-          draggable: false,
-          editable: false,
-          geodesic: false,
-          zIndex: 1
-        }
-    }
+      const cutResult = dateTest(cutObj.lastCutDate).result
+      const trimResult = dateTest(cutObj.lastTrimDate).result
+      let polygonOptions = {
+        fillColor: cutResult === 'overdue' ? 'rgb(255, 99, 99)' : 
+          cutResult === 'due' ? 'yellow' : 
+          cutResult === 'cut_recently' ? 'green' : '',
+        fillOpacity: 0.5,
+        strokeColor: trimResult === 'overdue' ? 'red' : 
+        trimResult === 'due' ? 'orange' : 
+        trimResult === 'cut_recently' ? 'green' : '',
+        strokeOpacity: 1,
+        strokeWeight: 2,
+        clickable: false,
+        draggable: false,
+        editable: false,
+        geodesic: false,
+        zIndex: 1
+      };
+    //   if (result === 'overdue') {
+    //     polygonOptions = {
+    //       fillColor: 'red',
+    //       fillOpacity: 0.5,
+    //       strokeColor: "red",
+    //       strokeOpacity: 1,
+    //       strokeWeight: 2,
+    //       clickable: false,
+    //       draggable: false,
+    //       editable: false,
+    //       geodesic: false,
+    //       zIndex: 1
+    //     }
+    //   } 
+    //   if (result === 'due') {
+    //     polygonOptions = {
+    //       fillColor: 'orange',
+    //       fillOpacity: 0.5,
+    //       strokeColor: "orange",
+    //       strokeOpacity: 1,
+    //       strokeWeight: 2,
+    //       clickable: false,
+    //       draggable: false,
+    //       editable: false,
+    //       geodesic: false,
+    //       zIndex: 1
+    //     }
+    //   } 
+    //   if (result === 'cut_recently') {
+    //     polygonOptions = {
+    //       fillColor: 'lightgreen',
+    //       fillOpacity: 0.5,
+    //       strokeColor: "green",
+    //       strokeOpacity: 1,
+    //       strokeWeight: 2,
+    //       clickable: false,
+    //       draggable: false,
+    //       editable: false,
+    //       geodesic: false,
+    //       zIndex: 1
+    //     }
+    // }
       // console.log(result.result)
       return (
         <Polygon 

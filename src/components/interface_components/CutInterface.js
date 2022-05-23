@@ -7,9 +7,10 @@ const CutInterface = (props) => {
   }
   return (
     <div className='cut-interface'>
-      {props.cutName}
+      <h2>{props.cutName}</h2>
       <div className='cut-button-div'>
         <button onClick={() => props.updateCutDate(props.cutName)} className='complete-cut'>✔︎</button>
+        <button onClick={() => props.updateTrimDate(props.cutName)} className='complete-trim'>Trim</button>
         <button onClick={() => props.setShowImagePopup(true)} className='failed-cut'>✘</button>
       </div>
     </div>
