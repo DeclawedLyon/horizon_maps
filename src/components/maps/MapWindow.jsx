@@ -13,7 +13,7 @@ const containerStyle = {
 
 const center = {
   lat: 48.43467084543356, 
-  lng: -123.41899931709301
+  lng: Number(-123.41899931709301)
 };
 
 const options = {
@@ -28,22 +28,6 @@ const options = {
   geodesic: false,
   zIndex: 1
 }
-
-// const defaultCoords = () => {
-//   return [
-//     {lat: 48.43459930069949, lng: -123.41968549014572},
-//     {lat: 48.434594894435115, lng: -123.41938888555694},
-//     {lat: 48.43454781192849, lng: -123.41933211475094},
-//     {lat: 48.434378314543366, lng: -123.41932501840019},
-//     {lat: 48.43418056687943, lng: -123.41936759650467},
-//     {lat: 48.43378506924258, lng: -123.41850184171304},
-//     {lat: 48.433290692867246, lng: -123.41854441981755},
-//     {lat: 48.433290692867246, lng: -123.4200062680723},
-//     {lat: 48.433337776538814, lng: -123.42006303887831},
-//     {lat: 48.43435477319516, lng: -123.4199069191618},
-//     {lat: 48.43459930069949, lng: -123.41968549014572}
-//   ]
-// }
 
 function MapWindow(props) {
   // use key is dev only code. it sets the google maps api key to either 
@@ -80,10 +64,17 @@ function MapWindow(props) {
     const timeDifference = today.getTime() - date.getTime();
     const differenceInDays = timeDifference / (1000 * 60 * 60 * 24)
     if (differenceInDays > 14) {
+      console.log('need to cut!!')
       return {
         result: 'overdue'
       }
+    } else if (14 > differenceInDays && differenceInDays < 0) {
+      console.log('cut soon')
+      return {
+        result: 'due'
+      }
     } else {
+      console.log("don't cut")
       return {
         result: 'cut_recently'
       }
@@ -107,11 +98,26 @@ function MapWindow(props) {
           geodesic: false,
           zIndex: 1
         }
-      } else {
+      } 
+      if (result === 'due') {
         polygonOptions = {
           fillColor: 'lightblue',
           fillOpacity: 0.5,
-          strokeColor: "green",
+          strokeColor: "red",
+          strokeOpacity: 1,
+          strokeWeight: 2,
+          clickable: false,
+          draggable: false,
+          editable: false,
+          geodesic: false,
+          zIndex: 1
+        }
+      } 
+      if (result === 'cut_recently') {
+        polygonOptions = {
+          fillColor: 'lightblue',
+          fillOpacity: 0.5,
+          strokeColor: "red",
           strokeOpacity: 1,
           strokeWeight: 2,
           clickable: false,
@@ -121,7 +127,7 @@ function MapWindow(props) {
           zIndex: 1
         }
     }
-      console.log(result.result)
+      // console.log(result.result)
       return (
         <Polygon 
           key={`polygon-${x}_${cutObj.locationName}`}
@@ -145,7 +151,7 @@ function MapWindow(props) {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={12}
+        zoom={14}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
