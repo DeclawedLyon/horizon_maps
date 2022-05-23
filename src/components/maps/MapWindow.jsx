@@ -7,9 +7,8 @@ const devApiKey = process.env.REACT_APP_API_KEY_2;
 // const ScriptLoaded = require("../../docs/ScriptLoaded").default;
 
 const containerStyle = {
-  width: '100vw',
-  height: '60vh',
-  marginTop: '2em',
+  width: '100%',
+  height: '50vh',
 };
 
 const center = {
@@ -112,7 +111,7 @@ function MapWindow(props) {
         polygonOptions = {
           fillColor: 'lightblue',
           fillOpacity: 0.5,
-          strokeColor: "red",
+          strokeColor: "green",
           strokeOpacity: 1,
           strokeWeight: 2,
           clickable: false,

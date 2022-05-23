@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/nav_elements/Navbar';
+import BottomNav from './components/nav_elements/BottomNav';
 import MapWindow from './components/maps/MapWindow';
 import CutsMenu from './components/interface_components/CutsMenu';
 import { useState } from 'react';
@@ -124,18 +125,39 @@ function setDefaultCuts() {
 }
 
 function App() {
-  const devMode = true;
+  const devMode = false;
 
   const [cutList, setCutList] = useState(setDefaultCuts());
 
+  const updateCutDate = (cutName) => {
+    console.log('there is a bug in updatecuts that must be fixed. cuts are currently updated by mapping the state and resetting state to new mapped obj. Should use prevState instead to prevent overwritten dates');
+    const newCutList = cutList.map(cut => {
+      if (cut.locationName === cutName) {
+        return {
+          locationName: cut.locationName,
+          polygonCoords: cut.polygonCoords,
+          lastCutDate: new Date()
+        }
+      } else {
+        return cut
+      }
+    })
+    setCutList(newCutList);
+  }
+
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <MapWindow 
         devMode={devMode}
         cutList={cutList}
+        updateCutDate={updateCutDate}
       />
-      <CutsMenu cutList={cutList}/>
+      <CutsMenu
+        cutList={cutList}
+        updateCutDate={updateCutDate}
+      />
+      <BottomNav />
     </div>
   );
 }

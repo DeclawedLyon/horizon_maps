@@ -1,0 +1,17 @@
+#bottom-nav-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-nav-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+}

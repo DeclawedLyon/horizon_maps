@@ -9,7 +9,7 @@ const CutInterface = (props) => {
     <div className='cut-interface'>
       {props.cutName}
       <div id='cut-button-div'>
-        <button onClick={completeCut} className='complete-cut'>✔︎</button>
+        <button onClick={() => props.updateCutDate(props.cutName)} className='complete-cut'>✔︎</button>
       </div>
     </div>
   )
