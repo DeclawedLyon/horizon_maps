@@ -3,6 +3,7 @@
 }
 .App {
   --menu-height: calc(60vh);
+  --button-height: calc((50vh / 7) );
   height: 100vh;
   text-align: center;
   overflow: hidden;

@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   top: 0;
-  border: 2px solid black;
+  border: 2px solid rgb(255, 99, 99);
   width: 100vw;
   height: 2em;
 }

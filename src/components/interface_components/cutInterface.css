@@ -15,20 +15,61 @@
 .cut-button-div{
   display: flex;
   position: absolute;
-  top: 30%;
-  right: 10%;
+  top: 10%;
+  right: 2.5%;
+  height: 80%;
   display: flex;
   justify-content: space-between;
   justify-items: flex-end;
-  border: 2px solid pink;
   width: fit-content;
   justify-self: flex-end;
 }
+.cut-button-div > * {
+  margin-left: 0.5em;
+}
 .complete-cut {
+  overflow: hidden;
   color: green;
+  border-radius: 50%;
   border: 2px solid black;
+  height: var(--button-height);
+  width: var(--button-height);
+}
+.complete-cut > .cut-png {
+  background-color: rgba(0, 128, 0, 0);
+}
+.complete-trim {
+  /* background-color: green; */
+  overflow: hidden;
+  color: red;
+  border-radius: 50%;
+  border: 2px solid black;
+  height: var(--button-height);
+  width: var(--button-height);
+}
+.complete-trim > .cut-png {
+  background-color: rgba(0, 128, 0, 0);
 }
 .failed-cut {
-  color: red;
+  overflow: hidden;
+  background-color: red;
+  border-radius: 50%;
   border: 2px solid black;
+  height: var(--button-height);
+  width: var(--button-height);
+}
+.failed-cut > .cut-png {
+  background-color: red;
+}
+.png-container {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  border-radius: 50%;
+}
+.cut-png {
+  /* border: 2px solid white; */
+  border-radius: 50%;
+  height: calc(var(--button-height) * 0.8);
+  width: calc(var(--button-height) * 0.8);
 }
