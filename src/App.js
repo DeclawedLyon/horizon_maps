@@ -12,6 +12,7 @@ function setDefaultCuts() {
   const newNadenCutList = [
     {
       locationName: 'Baseball Field',
+      locationGroup: `Entrance`,
       polygonCoords: [
         {lat: 48.43459930069949, lng: Number(-123.41968549014572)},
         {lat: 48.434594894435115, lng:Number( -123.41938888555694)},
@@ -30,6 +31,7 @@ function setDefaultCuts() {
     },
     {
       locationName: 'Entrance Road',
+      locationGroup: `Entrance`,
       polygonCoords: [
         {lat: 48.433220067255604, lng:Number( -123.42013400241261)},
         {lat: 48.433097649335174, lng:Number( -123.41817540960528)},
@@ -46,6 +48,7 @@ function setDefaultCuts() {
     },
     {
       locationName: 'Fire Hall (East Side)',
+      locationGroup: ``,
       polygonCoords: [
         {lat: 48.43240551169887, lng: Number(-123.42031850753217)},
         {lat: 48.43192421851562, lng: Number(-123.42037018940131)},
@@ -67,6 +70,7 @@ function setDefaultCuts() {
     },
     {
       locationName: 'Parking Lot (South)',
+      locationGroup: ``,
       polygonCoords: [
         {lat: 48.434682150511534, lng:Number( -123.41968803278945)},
         {lat: 48.434844669976805, lng:Number( -123.41943608127116)},
@@ -79,6 +83,7 @@ function setDefaultCuts() {
     },
     {
       locationName: 'Parking Lot (North)',
+      locationGroup: ``,
       polygonCoords: [
         {lat: 48.43494250550318, lng: Number(-123.41928152471407)},
         {lat: 48.435064918978696, lng:Number( -123.41903315243775)},
@@ -91,6 +96,7 @@ function setDefaultCuts() {
     },
     {
       locationName: 'Ontario Dr Hillside',
+      locationGroup: ``,
       polygonCoords: [
         {lat: 48.43478713414014, lng: Number(-123.42056596419964)},
         {lat: 48.43465530351046, lng: Number(-123.42035307367709)},
@@ -115,6 +121,7 @@ function setDefaultCuts() {
     },
     {
       locationName: `General's House(1)`,
+      locationGroup: `General's House`,
       polygonCoords: [
         {lat: 48.436767084664204, lng: Number(-123.42031919113545)},
         {lat: 48.43677537481232, lng: Number(-123.42031641433873)},
@@ -130,6 +137,7 @@ function setDefaultCuts() {
     },
     {
       locationName: `General's House(2)`,
+      locationGroup: `General's House`,
       polygonCoords: [
         {lat: 48.436742895519835, lng: Number(-123.42035416798281)},
         {lat: 48.43668506166494, lng: Number(-123.42028711275947)},
@@ -145,6 +153,7 @@ function setDefaultCuts() {
     },
     {
       locationName: `General's House(3)`,
+      locationGroup: `General's House`,
       polygonCoords: [
         {lat: 48.43668694649599, lng: Number(-123.42020742506682)},
         {lat: 48.43672333108229, lng: Number(-123.42007969241698)},
@@ -159,6 +168,7 @@ function setDefaultCuts() {
     },
     {
       locationName: `General's House(4)`,
+      locationGroup: `General's House`,
       polygonCoords: [
         {lat: 48.43663766606545, lng: Number(-123.42041707322039)},
         {lat: 48.436674971816345, lng: Number(-123.4202650435991)},
@@ -173,20 +183,105 @@ function setDefaultCuts() {
       ],
       lastCutDate: new Date("May 20, 2022, 21:45:10"),
       lastTrimDate: new Date("May 20, 2022, 21:45:10")
-    }
+    },
+    {
+      locationName: `General's Office(1)`,
+      locationGroup: `General's House`,
+      polygonCoords: [
+        {lat: 48.4365500107154, lng: Number(-123.4206091083413)},
+        {lat: 48.43658180645899, lng: Number(-123.42053653629485)},
+        {lat: 48.43658407758275, lng: Number(-123.42052489738171)},
+        {lat: 48.43658407758275, lng: Number(-123.42051325846862)},
+        {lat: 48.4365790811103, lng: Number(-123.42049545777795)},
+        {lat: 48.43652548255677, lng: Number(-123.42042767822514)},
+        {lat: 48.43651276424761, lng: Number(-123.42045232533526)},
+        {lat: 48.43656999661369, lng: Number(-123.42052215881392)},
+        {lat: 48.436541834663835, lng: Number(-123.42059952335403)},
+        {lat: 48.4365500107154, lng: Number(-123.4206091083413)}
+      ],
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
+    },
+    {
+      locationName: `General's Office(2)`,
+      locationGroup: `General's House`,
+      polygonCoords: [
+        {lat: 48.436484148038566, lng: Number(-123.42068373431711)},
+        {lat: 48.43640375003682, lng: Number(-123.42058651516054)},
+        {lat: 48.4363910316972, lng: Number(-123.42061253155453)},
+        {lat: 48.43636332387485, lng: Number(-123.420580353383)},
+        {lat: 48.43636150696795, lng: Number(-123.4205871998025)},
+        {lat: 48.43636286964813, lng: Number(-123.42059541550584)},
+        {lat: 48.436444176166596, lng: Number(-123.42069263466243)},
+        {lat: 48.436459165622274, lng: Number(-123.42069742715607)},
+        {lat: 48.436484148038566, lng: Number(-123.42068373431711)}
+      ],
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
+    },
+    {
+      locationName: 'Museum Parking Lot',
+      locationGroup: `General's House`,
+      polygonCoords:[
+        {lat: 48.43630109477424, lng: Number(-123.42092130507676)},
+        {lat: 48.436335673835345, lng: Number(-123.42086174321811)},
+        {lat: 48.43630052837274, lng: Number(-123.42081480456177)},
+        {lat: 48.436267162404704, lng: Number(-123.42078731192017)},
+        {lat: 48.43623112713463, lng: Number(-123.42077524197998)},
+        {lat: 48.4362044343255, lng: Number(-123.42077121866657)},
+        {lat: 48.4361821903072, lng: Number(-123.42078060639784)},
+        {lat: 48.43622445393367, lng: Number(-123.42083223891983)},
+        {lat: 48.4362466979335, lng: Number(-123.42079435272193)},
+        {lat: 48.436259599448924, lng: Number(-123.42081078124836)},
+        {lat: 48.43623957985461, lng: Number(-123.42085101438235)},
+        {lat: 48.436300083493286, lng: Number(-123.42092276347137)},
+        {lat: 48.43630109477424, lng: Number(-123.42092130507676)}
+      ],
+      lastCutDate: new Date('May 1, 2022, 12:45:10'),
+      lastTrimDate: new Date('May 1, 2022, 12:45:10')
+    },
+    {
+      locationName: `General's Park(1)`,
+      locationGroup: `General's House`,
+      polygonCoords: [
+        {lat: 48.43660349036499, lng: Number(-123.42101563496729)},
+        {lat: 48.43668178861698, lng: Number(-123.42082788033387)},
+        {lat: 48.43656656557929, lng: Number(-123.42067030055227)},
+        {lat: 48.436537648559685, lng: Number(-123.42070986313574)},
+        {lat: 48.43649538519377, lng: Number(-123.4207601545554)},
+        {lat: 48.43658791967548, lng: Number(-123.4208962766646)},
+        {lat: 48.43660349036499, lng: Number(-123.42101563496729)}
+      ],
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
+    },
+    {
+      locationName: `General's Park(2)`,
+      locationGroup: `General's House`,
+      polygonCoords: [
+        {lat: 48.4367049221709, lng: Number(-123.42079435272233)},
+        {lat: 48.43680724352172, lng: Number(-123.42055295390793)},
+        {lat: 48.43676008675087, lng: Number(-123.42048925144303)},
+        {lat: 48.436727165960356, lng: Number(-123.42047785205459)},
+        {lat: 48.43670091828778, lng: Number(-123.42048321647269)},
+        {lat: 48.436652871665544, lng: Number(-123.42053082568329)},
+        {lat: 48.436571904106756, lng: Number(-123.4206582306131)},
+        {lat: 48.4367049221709, lng: Number(-123.42079435272233)}
+      ],
+      lastCutDate: new Date(),
+      lastTrimDate: new Date()
+    },
+    // ==================== data boilerplate ====================
+    
     // {
-    //   locationName: '',
+    //   locationName: ``,
+    //   locationGroup: ``,
     //   polygonCoords: [
     //     {},
+    //     {}
     //   ],
-    //   lastCutDate: ''
-    // },
-    // {
-    //   locationName: '',
-    //   polygonCoords: [
-    //     {},
-    //   ],
-    //   lastCutDate: ''
+    //   lastCutDate: new Date(),
+    //   lastTrimDate: new Date()
     // },
   ]
   return newNadenCutList
