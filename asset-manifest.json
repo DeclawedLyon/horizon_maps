@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/horizon_maps/static/css/main.eb564b4f.css",
-    "main.js": "/horizon_maps/static/js/main.3adb0cda.js",
+    "main.css": "/horizon_maps/static/css/main.b9892d79.css",
+    "main.js": "/horizon_maps/static/js/main.b6dee102.js",
     "static/js/787.6496d064.chunk.js": "/horizon_maps/static/js/787.6496d064.chunk.js",
     "static/media/lawn_mower.png": "/horizon_maps/static/media/lawn_mower.47d99eea27ae09b79878.png",
     "static/media/alert.png": "/horizon_maps/static/media/alert.060b44048aee6735d802.png",
     "index.html": "/horizon_maps/index.html",
-    "main.eb564b4f.css.map": "/horizon_maps/static/css/main.eb564b4f.css.map",
-    "main.3adb0cda.js.map": "/horizon_maps/static/js/main.3adb0cda.js.map",
+    "main.b9892d79.css.map": "/horizon_maps/static/css/main.b9892d79.css.map",
+    "main.b6dee102.js.map": "/horizon_maps/static/js/main.b6dee102.js.map",
     "787.6496d064.chunk.js.map": "/horizon_maps/static/js/787.6496d064.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb564b4f.css",
-    "static/js/main.3adb0cda.js"
+    "static/css/main.b9892d79.css",
+    "static/js/main.b6dee102.js"
   ]
 }
