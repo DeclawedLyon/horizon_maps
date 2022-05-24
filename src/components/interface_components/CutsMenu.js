@@ -6,12 +6,12 @@ export default function CutsMenu(props) {
   const [cuts, setCuts] = useState([])
   useEffect(() => {
     console.log('cutsMenu useEffect has triggered')
-    renderCuts(props.cutList)
+    if (props.cutList) renderCuts(props.cutList) 
   }, [props.cutList])
 
   const renderCuts = (cutArr) => {
     // console.log(cutArr);
-    let cutElementArr = cutArr.map((cut, x) => {
+    let cutElementArr = cutArr ? cutArr.map((cut, x) => {
       // console.log(cut)
       return (
         <CutInterface 
@@ -22,7 +22,7 @@ export default function CutsMenu(props) {
           setShowImagePopup={props.setShowImagePopup}
         />
       )
-    });
+    }) : '';
     setCuts(cutElementArr);
   }
   return (

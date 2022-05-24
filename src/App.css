@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 .App {
-  --menu-height: calc(60vh);
+  --nav-height: calc(2em);
+  --menu-height: calc(40vh + 3em);
   --button-height: calc((50vh / 7) );
   height: 100vh;
   text-align: center;

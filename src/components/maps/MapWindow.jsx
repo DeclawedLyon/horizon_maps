@@ -8,7 +8,8 @@ const devApiKey = process.env.REACT_APP_API_KEY_2;
 
 const containerStyle = {
   width: '100%',
-  height: '50vh',
+  height: '40vh',
+  marginTop: 'var(--nav-height)',
 };
 
 const center = {
@@ -16,18 +17,18 @@ const center = {
   lng: Number(-123.41899931709301)
 };
 
-const options = {
-  fillColor: "lightblue",
-  fillOpacity: 0.5,
-  strokeColor: "red",
-  strokeOpacity: 1,
-  strokeWeight: 2,
-  clickable: false,
-  draggable: false,
-  editable: false,
-  geodesic: false,
-  zIndex: 1
-}
+// const options = {
+//   fillColor: "lightblue",
+//   fillOpacity: 0.5,
+//   strokeColor: "red",
+//   strokeOpacity: 1,
+//   strokeWeight: 2,
+//   clickable: false,
+//   draggable: false,
+//   editable: false,
+//   geodesic: false,
+//   zIndex: 1
+// }
 
 function MapWindow(props) {
   // use key is dev only code. it sets the google maps api key to either 
@@ -102,49 +103,6 @@ function MapWindow(props) {
         geodesic: false,
         zIndex: 1
       };
-    //   if (result === 'overdue') {
-    //     polygonOptions = {
-    //       fillColor: 'red',
-    //       fillOpacity: 0.5,
-    //       strokeColor: "red",
-    //       strokeOpacity: 1,
-    //       strokeWeight: 2,
-    //       clickable: false,
-    //       draggable: false,
-    //       editable: false,
-    //       geodesic: false,
-    //       zIndex: 1
-    //     }
-    //   } 
-    //   if (result === 'due') {
-    //     polygonOptions = {
-    //       fillColor: 'orange',
-    //       fillOpacity: 0.5,
-    //       strokeColor: "orange",
-    //       strokeOpacity: 1,
-    //       strokeWeight: 2,
-    //       clickable: false,
-    //       draggable: false,
-    //       editable: false,
-    //       geodesic: false,
-    //       zIndex: 1
-    //     }
-    //   } 
-    //   if (result === 'cut_recently') {
-    //     polygonOptions = {
-    //       fillColor: 'lightgreen',
-    //       fillOpacity: 0.5,
-    //       strokeColor: "green",
-    //       strokeOpacity: 1,
-    //       strokeWeight: 2,
-    //       clickable: false,
-    //       draggable: false,
-    //       editable: false,
-    //       geodesic: false,
-    //       zIndex: 1
-    //     }
-    // }
-      // console.log(result.result)
       return (
         <Polygon 
           key={`polygon-${x}_${cutObj.locationName}`}
@@ -154,9 +112,7 @@ function MapWindow(props) {
         />
       )
     })
-    // console.log(formattedCuts)
     return formattedCuts;
-    setCutPolygons(formattedCuts)
   }
 
   useEffect(() => {
