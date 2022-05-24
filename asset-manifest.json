@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/horizon_maps/static/css/main.a30a6299.css",
-    "main.js": "/horizon_maps/static/js/main.d1830f70.js",
+    "main.css": "/horizon_maps/static/css/main.eb564b4f.css",
+    "main.js": "/horizon_maps/static/js/main.3adb0cda.js",
     "static/js/787.6496d064.chunk.js": "/horizon_maps/static/js/787.6496d064.chunk.js",
-    "static/media/logo.svg": "/horizon_maps/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/lawn_mower.png": "/horizon_maps/static/media/lawn_mower.47d99eea27ae09b79878.png",
+    "static/media/alert.png": "/horizon_maps/static/media/alert.060b44048aee6735d802.png",
     "index.html": "/horizon_maps/index.html",
-    "main.a30a6299.css.map": "/horizon_maps/static/css/main.a30a6299.css.map",
-    "main.d1830f70.js.map": "/horizon_maps/static/js/main.d1830f70.js.map",
+    "main.eb564b4f.css.map": "/horizon_maps/static/css/main.eb564b4f.css.map",
+    "main.3adb0cda.js.map": "/horizon_maps/static/js/main.3adb0cda.js.map",
     "787.6496d064.chunk.js.map": "/horizon_maps/static/js/787.6496d064.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a30a6299.css",
-    "static/js/main.d1830f70.js"
+    "static/css/main.eb564b4f.css",
+    "static/js/main.3adb0cda.js"
   ]
 }
