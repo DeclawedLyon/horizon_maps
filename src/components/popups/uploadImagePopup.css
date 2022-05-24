@@ -1,5 +1,7 @@
 #upload-image-popup {
+  position: relative;
   color: red;
+  background-color: rgb(241, 238, 238);
   position: absolute;
   top: 0;
   width: 60vw;
@@ -21,6 +23,21 @@
   background-color: #0a0a0a31;
   z-index: 0;
 } */
-#popup-content-window {
+#image-popup-content-window {
+  position: relative;
   z-index: 10;
+}
+#image-popup-exit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  color: rgb(233, 233, 233);
+  height: 25px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: rgb(87, 87, 87);
 }
