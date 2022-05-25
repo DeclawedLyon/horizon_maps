@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import ScheduleTimeslot from './ScheduleTimeslot';
 import './scheduleWindow.css'
 
 export default function ScheduleWindow(props) {
   // i should pass the current day from the App level instead of processing
   // the current date on each render
   const [scheduleElements, setScheduleElements] = useState([])
-  const formatScedule = (arr) => {
+  const filterScheduleDay = (arr) => {
     let today; 
     switch(new Date().getDay()) {
       case 0:
@@ -29,22 +30,31 @@ export default function ScheduleWindow(props) {
       case 6:
         today = "Saturday";
     };
-    console.log(today)
-    arr.forEach(day => {
-      if (day.day === today) {
-        const formattedSchedule = day.scheduledPlans.map(plan => {
-          console.log(plan)
-        })
-      }
-      
+    const todaysPlan = arr.filter(day => day.day === today)
+    return todaysPlan[0]
+  }
+  const formatScedule = (todaysPlan) => {
+    const formattedTimeslots = todaysPlan.scheduledPlans.map(hour => {
+      console.log(hour)
+      return (
+        <ScheduleTimeslot
+          startTime={hour.startTime}
+          endTime={hour.endTime}
+          plan={hour.plan}
+          description={hour.description ? hour.description : ''}
+        />
+      )
     })
+
+    return formattedTimeslots;
   }
   useEffect(() => {
-    const formattedSchedule = formatScedule(props.schedule)
-
+    const currentScheduledDay = filterScheduleDay(props.schedule)
+    const formattedSchedule = formatScedule(currentScheduledDay)
+    setScheduleElements(formattedSchedule)
   }, [])
   return (
-    <div id='schedule-window'></div>
+    <div id='schedule-window'>{scheduleElements ? scheduleElements : 'test'}</div>
   )
 }
 

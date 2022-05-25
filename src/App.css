@@ -5,7 +5,13 @@
   --nav-height: calc(2em);
   --menu-height: calc(40vh + 3em);
   --button-height: calc((50vh / 7) );
-  --bottom-nav-height: 10vh; 
+  --bottom-nav-height: 10vh;
+  --combined-nav-heights: calc(var(--nav-height) + var(--bottom-nav-height));
+  --timeslot-container-height: calc(100vh - var(--bottom-nav-height) / 7);
+  --timeslot-primary: rgb(85, 200, 253);
+  --timeslot-secondary: rgb(0, 98, 255);
+  --timeslot-font-color: rgb(144, 230, 245);
+  --timeslot-background-color: rgb(197, 244, 252);
   height: 100vh;
   text-align: center;
   overflow: hidden;

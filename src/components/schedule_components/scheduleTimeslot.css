@@ -1,0 +1,31 @@
+.timeslot-container {
+  display: flex;
+  border: 1px solid black;
+  height: 100%;
+}
+.timeslot-header {
+  position: relative;
+  height: var(--timeslot-container);
+  /* width: var(--timeslot-container); */
+  aspect-ratio: 1/1;
+  border-right: 2px solid var(--timeslot-secondary);
+  background-color: var(--timeslot-primary);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.timeslot-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--timeslot-background-color);
+}
+/* .timeslot-title {
+
+} */
+
+/* --timeslot-secondary
+--timeslot-font-color
+--timeslot-background-color */
