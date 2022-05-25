@@ -82,6 +82,9 @@ function MapWindow(props) {
       }
     }
   }
+  const testClick = () => {
+    console.log('clicked!')
+  }
 
   const formatCutList = (cutArr) => {
     const formattedCuts = cutArr.map((cutObj, x) => {
@@ -109,6 +112,7 @@ function MapWindow(props) {
           onLoad={loadPolygon}
           paths={cutObj.polygonCoords}
           options={polygonOptions}
+          onClick={testClick}
         />
       )
     })

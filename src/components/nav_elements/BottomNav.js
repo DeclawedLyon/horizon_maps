@@ -5,12 +5,12 @@ const BottomNav = (props) => {
 
   return (
     <div id='bottom-nav-menu'>
-      <div className='bottom-nav-option'>x</div>
-      <div className='bottom-nav-option'>y</div>
-      <div className='bottom-nav-option'>z</div>
-      <div className='bottom-nav-option'>a</div>
-      <div className='bottom-nav-option'>b</div>
-      <div className='bottom-nav-option'>c</div>
+      <div className='bottom-nav-option'>Maps</div>
+      <div className='bottom-nav-option'>Schedule</div>
+      <div className='bottom-nav-option'>Cut History?</div>
+      <div className='bottom-nav-option' style={{fontSize: '0.5em'}}>Set Schedules? (Management only?)</div>
+      <div className='bottom-nav-option'>Extra Tasks?</div>
+      <div className='bottom-nav-option'>Extra Tasks?</div>
     </div>
   )
 }

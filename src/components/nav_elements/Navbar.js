@@ -10,7 +10,7 @@ export default function Navbar(props) {
         <li><button className='navbar-button' onClick={() =>{ /*props.setCutList(props.naden)*/ testClick()}}>Naden</button></li>
         <li><button className='navbar-button' onClick={() => {/*props.setCutList(props.colville)*/ testClick()}}>Colville</button></li>
       </ul>
-      <button>sidebar menu?</button>
+      <button style={{fontSize: '0.5em'}}>sidebar menu? || login/logout?</button>
     </nav>
   )
 }

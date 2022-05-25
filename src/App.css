@@ -5,6 +5,7 @@
   --nav-height: calc(2em);
   --menu-height: calc(40vh + 3em);
   --button-height: calc((50vh / 7) );
+  --bottom-nav-height: 10vh; 
   height: 100vh;
   text-align: center;
   overflow: hidden;

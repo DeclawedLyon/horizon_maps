@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
 import "./tailwind.generated.css"
+// import useVisualMode from './hooks/useVisualMode'
 import Navbar from './components/nav_elements/Navbar';
 import BottomNav from './components/nav_elements/BottomNav';
 import MapWindow from './components/maps/MapWindow';
 import CutsMenu from './components/interface_components/CutsMenu';
+import ScheduleWindow from './components/schedule_components/ScheduleWindow';
 import UploadImagePopup from './components/popups/UploadImagePopup'
 import { useState } from 'react';
 
@@ -336,6 +338,10 @@ const colvilleCutList = [
   //   lastTrimDate: new Date()
   // },
 ]
+const finalCutList = {
+  colville: colvilleCutList,
+  naden: NadenCutList
+}
 function setDefaultCuts() {
 
   const newNadenCutList = [
@@ -616,11 +622,19 @@ function setDefaultCuts() {
   return newNadenCutList
 }
 
+const MAPS = 'MAP'
+const SCHEDULE = 'SCHEDULE'
+
 function App() {
   const devMode = false;
+  // const {mode, transition, back} = useVisualMode(MAPS) 
+  const [mode, setMode] = useState(SCHEDULE)
 
   const [cutList, setCutList] = useState(setDefaultCuts());
+  const [showSchedule, setShowSchedule] = useState(false)
+  const [showMap, setShowMap] = useState(true)
   const [showImagePopup, setShowImagePopup] = useState(false)
+
 
   const updateCutDate = (cutName) => {
     console.log('there is a bug in updatecuts that must be fixed. cuts are currently updated by mapping the state and resetting state to new mapped obj. Should use prevState instead to prevent overwritten dates');
@@ -717,26 +731,31 @@ function App() {
     }, 7000)
   }
 
+  console.log('the mode is: ', mode)
   return (
     <div className="App">
       <Navbar 
-      setCutList={setCutList}
+        inputs={[]}
+        setCutList={setCutList}
         colville={colvilleCutList}
       />
       {/* <h1 className='bg-white-100 text-blue-300'>Hello</h1> */}
-      <MapWindow 
+      {mode === MAPS && (<MapWindow 
         devMode={devMode}
         cutList={cutList}
         colville={colvilleCutList}
         naden={NadenCutList}
         updateCutDate={updateCutDate}
-      />
-      <CutsMenu
+      />)}
+      {mode === MAPS && (<CutsMenu
         cutList={cutList}
         updateCutDate={updateCutDate}
         updateTrimDate={updateTrimDate}
         setShowImagePopup={setShowImagePopup}
-      />
+      />)}
+      {mode === SCHEDULE && <ScheduleWindow 
+
+      />}
       <BottomNav />
       {showImagePopup && <UploadImagePopup 
         setShowImagePopup={setShowImagePopup}
