@@ -621,18 +621,45 @@ function setDefaultCuts() {
   ]
   return newNadenCutList
 }
+const taskList = [
+  {
+    taskNickname: 'Clean Roads',
+    taskLocation: 'Government House',
+    taskDescription: 'Shovel and the blow-dry the leaves out of the gutters',
+    taskPriority: 1,
+    dateSet: new Date('May, 20, 2022, 12:00:00'),
+    dateComplete: new Date('May, 23, 2022, 12:00:00'),
+    taskIsComplete: true,
+  },
+  {
+    taskNickname: 'Pick Up Wood Pile',
+    taskLocation: 'Government House',
+    taskDescription: 'Tansfer wood from wood pile to wood bin. Blow dry plot when finished',
+    taskPriority: 1,
+    dateSet: new Date('April, 20, 2022, 12:00:00'),
+    dateComplete: new Date('May, 23, 2022, 15:00:00'),
+    taskIsComplete: true
+  },
+  {
+    taskNickname: 'Trim Hedges',
+    taskLocation: 'St. Annes',
+    taskDescription: 'Trim Hedges, Clean Trimmings',
+    taskPriority: 1,
+    dateSet: new Date('May, 23, 2022, 15:00:00'),
+    dateComplete: '',
+    taskIsComplete: false
+  },
+]
 
-const MAPS = 'MAP'
+const MAP = 'MAP'
 const SCHEDULE = 'SCHEDULE'
 
 function App() {
   const devMode = false;
-  // const {mode, transition, back} = useVisualMode(MAPS) 
+  // const {mode, transition, back} = useVisualMode(MAP) 
   const [mode, setMode] = useState(SCHEDULE)
 
   const [cutList, setCutList] = useState(setDefaultCuts());
-  const [showSchedule, setShowSchedule] = useState(false)
-  const [showMap, setShowMap] = useState(true)
   const [showImagePopup, setShowImagePopup] = useState(false)
 
 
@@ -740,23 +767,25 @@ function App() {
         colville={colvilleCutList}
       />
       {/* <h1 className='bg-white-100 text-blue-300'>Hello</h1> */}
-      {mode === MAPS && (<MapWindow 
+      {mode === MAP && (<MapWindow 
         devMode={devMode}
         cutList={cutList}
         colville={colvilleCutList}
         naden={NadenCutList}
         updateCutDate={updateCutDate}
       />)}
-      {mode === MAPS && (<CutsMenu
+      {mode === MAP && (<CutsMenu
         cutList={cutList}
         updateCutDate={updateCutDate}
         updateTrimDate={updateTrimDate}
         setShowImagePopup={setShowImagePopup}
       />)}
       {mode === SCHEDULE && <ScheduleWindow 
-
+        taskList={taskList}
       />}
-      <BottomNav />
+      <BottomNav 
+        setMode={setMode}
+      />
       {showImagePopup && <UploadImagePopup 
         setShowImagePopup={setShowImagePopup}
       />}
