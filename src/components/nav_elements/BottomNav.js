@@ -9,7 +9,7 @@ const BottomNav = (props) => {
       <div className='bottom-nav-option' onClick={() => {props.setMode('SCHEDULE')}}>Schedule</div>
       <div className='bottom-nav-option'>Cut History?</div>
       <div className='bottom-nav-option' style={{fontSize: '0.5em'}}>Set Schedules? (Management only?)</div>
-      <div className='bottom-nav-option'>Extra Tasks?</div>
+      <div className='bottom-nav-option' onClick={() => {props.setMode("EXTRA_TASKS")}}>Extra Tasks?</div>
       <div className='bottom-nav-option'>Extra Tasks?</div>
     </div>
   )

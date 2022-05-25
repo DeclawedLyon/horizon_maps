@@ -5,7 +5,7 @@ import './cutsMenu.css'
 export default function CutsMenu(props) {
   const [cuts, setCuts] = useState([])
   useEffect(() => {
-    console.log('cutsMenu useEffect has triggered')
+    // console.log('cutsMenu useEffect has triggered')
     if (props.cutList) renderCuts(props.cutList) 
   }, [props.cutList])
 

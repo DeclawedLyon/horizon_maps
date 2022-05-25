@@ -64,26 +64,26 @@ function MapWindow(props) {
     const today = new Date();
     const timeDifference = today.getTime() - date.getTime();
     const differenceInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
-    console.log(differenceInDays , "between", today, 'and', date)
+    // console.log(differenceInDays , "between", today, 'and', date)
     if (differenceInDays > 14) {
-      console.log('need to cut!!')
+      // console.log('need to cut!!')
       return {
         result: 'overdue'
       }
     } else if (14 > differenceInDays && differenceInDays > 1) {
-      console.log('cut soon')
+      // console.log('cut soon')
       return {
         result: 'due'
       }
     } else {
-      console.log("don't cut")
+      // console.log("don't cut")
       return {
         result: 'cut_recently'
       }
     }
   }
   const testClick = () => {
-    console.log('clicked!')
+    // console.log('clicked!')
   }
 
   const formatCutList = (cutArr) => {

@@ -5,7 +5,7 @@ import alert from '../../images/alert.png'
 
 const CutInterface = (props) => {
   const completeCut = () => {
-    console.log('cut!!')
+    // console.log('cut!!')
   }
   return (
     <div className='cut-interface'>

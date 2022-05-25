@@ -9,6 +9,7 @@ import CutsMenu from './components/interface_components/CutsMenu';
 import ScheduleWindow from './components/schedule_components/ScheduleWindow';
 import UploadImagePopup from './components/popups/UploadImagePopup'
 import { useState } from 'react';
+import ExtraTaskWindow from './components/extra_task_components/ExtraTaskWindow';
 
 const NadenCutList = [
   {
@@ -650,9 +651,242 @@ const taskList = [
     taskIsComplete: false
   },
 ]
+const schedule = [
+  {
+    day: 'Monday',
+    scheduledPlans: [
+      {
+        startTime: '07:00',
+        endTime: '08:00',
+        plan: ['Mow and Trim harbor sign']
+      },
+      {
+        startTime: '08:00',
+        endTime: '09:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '09:00',
+        endTime: '10:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '10:00',
+        endTime: '11:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '11:00',
+        endTime: '12:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '12:00',
+        endTime: '13:00',
+        plan: ['Mow and Trim Colville (Soccer Field)']
+      },
+      {
+        startTime: '13:00',
+        endTime: '14:00',
+        plan: ['Mow and Trim Colville (Baseball Diamond)']
+      },
+      {
+        startTime: '14:00',
+        endTime: '15:00',
+        plan: ['Mow and Trim Colville (Base Hospital)', 'Lock Up Tools']
+      },
+    ],
+    // ?? week: '1,2,3,4' ??
+  },
+  {
+    day: 'Tuesday',
+    scheduledPlans: [
+      {
+        startTime: '07:00',
+        endTime: '08:00',
+        plan: ['Mow and Trim harbor sign']
+      },
+      {
+        startTime: '08:00',
+        endTime: '09:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '09:00',
+        endTime: '10:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '10:00',
+        endTime: '11:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '11:00',
+        endTime: '12:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '12:00',
+        endTime: '13:00',
+        plan: ['Mow and Trim Colville (Soccer Field)']
+      },
+      {
+        startTime: '13:00',
+        endTime: '14:00',
+        plan: ['Friends Clean Up']
+      },
+      {
+        startTime: '14:00',
+        endTime: '15:00',
+        plan: ['Friends Clean Up', 'Lock Up Tools']
+      },
+    ],
+    // ?? week: '1,2,3,4' ??
+  },
+  {
+    day: 'Wednesday',
+    scheduledPlans: [
+      {
+        startTime: '07:00',
+        endTime: '08:00',
+        plan: ['Mow and Trim harbor sign']
+      },
+      {
+        startTime: '08:00',
+        endTime: '09:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '09:00',
+        endTime: '10:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '10:00',
+        endTime: '11:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '11:00',
+        endTime: '12:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '12:00',
+        endTime: '13:00',
+        plan: ['Mow and Trim Colville (Soccer Field)']
+      },
+      {
+        startTime: '13:00',
+        endTime: '14:00',
+        plan: ['Mow and Trim Colville (Baseball Diamond)']
+      },
+      {
+        startTime: '14:00',
+        endTime: '15:00',
+        plan: ['Mow and Trim Colville (Base Hospital)', 'Lock Up Tools']
+      },
+    ],
+    // ?? week: '1,2,3,4' ??
+  },
+  {
+    day: 'Thursday',
+    scheduledPlans: [
+      {
+        startTime: '07:00',
+        endTime: '08:00',
+        plan: ['Mow and Trim harbor sign']
+      },
+      {
+        startTime: '08:00',
+        endTime: '09:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '09:00',
+        endTime: '10:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '10:00',
+        endTime: '11:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '11:00',
+        endTime: '12:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '12:00',
+        endTime: '13:00',
+        plan: ['Mow and Trim Colville (Soccer Field)']
+      },
+      {
+        startTime: '13:00',
+        endTime: '14:00',
+        plan: ['Mow and Trim Colville (Baseball Diamond)']
+      },
+      {
+        startTime: '14:00',
+        endTime: '15:00',
+        plan: ['Mow and Trim Colville (Base Hospital)', 'Lock Up Tools']
+      },
+    ],
+    // ?? week: '1,2,3,4' ??
+  },
+  {
+    day: 'Friday',
+    scheduledPlans: [
+      {
+        startTime: '07:00',
+        endTime: '08:00',
+        plan: ['Mow and Trim harbor sign']
+      },
+      {
+        startTime: '08:00',
+        endTime: '09:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '09:00',
+        endTime: '10:00',
+        plan: ['Mow and Trim Naden (Entrance)']
+      },
+      {
+        startTime: '10:00',
+        endTime: '11:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '11:00',
+        endTime: '12:00',
+        plan: ['Mow and Trim FireHall']
+      },
+      {
+        startTime: '12:00',
+        endTime: '13:00',
+        plan: ['Mow and Trim Colville (Soccer Field)']
+      },
+      {
+        startTime: '13:00',
+        endTime: '14:00',
+        plan: ['Mow and Trim Colville (Baseball Diamond)']
+      },
+      {
+        startTime: '14:00',
+        endTime: '15:00',
+        plan: ['Mow and Trim Colville (Base Hospital)', 'Lock Up Tools']
+      },
+    ],
+    // ?? week: '1,2,3,4' ??
+  },
+]
 
 const MAP = 'MAP'
 const SCHEDULE = 'SCHEDULE'
+const EXTRA_TASKS = 'EXTRA_TASKS'
 
 function App() {
   const devMode = false;
@@ -711,7 +945,7 @@ function App() {
     }, 7000)
   }
   const updateTrimDate = (cutName) => {
-    console.log('Update Trims');
+    // console.log('Update Trims');
     const newCutList = cutList.map(cut => {
       if (cut.locationName === cutName) {
         return {
@@ -781,6 +1015,9 @@ function App() {
         setShowImagePopup={setShowImagePopup}
       />)}
       {mode === SCHEDULE && <ScheduleWindow 
+        schedule={schedule}
+      />}
+      {mode === EXTRA_TASKS && <ExtraTaskWindow
         taskList={taskList}
       />}
       <BottomNav 
