@@ -884,14 +884,15 @@ const schedule = [
   },
 ]
 
-const MAP = 'MAP'
-const SCHEDULE = 'SCHEDULE'
-const EXTRA_TASKS = 'EXTRA_TASKS'
+const LOGIN = 'LOGIN';
+const MAP = 'MAP';
+const SCHEDULE = 'SCHEDULE';
+const EXTRA_TASKS = 'EXTRA_TASKS';
 
 function App() {
   const devMode = false;
   // const {mode, transition, back} = useVisualMode(MAP) 
-  const [mode, setMode] = useState(SCHEDULE)
+  const [mode, setMode] = useState(MAP)
 
   const [cutList, setCutList] = useState(setDefaultCuts());
   const [showImagePopup, setShowImagePopup] = useState(false)

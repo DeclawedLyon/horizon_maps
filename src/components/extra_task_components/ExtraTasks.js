@@ -2,8 +2,15 @@ import React from 'react'
 import './extraTasks.css'
 
 const ExtraTasks = (props) => {
+  function completeTask(task) {
+    console.log('test')
+    alert('test')
+  }
   return (
-    <div className='scheduled-task'>word: {props.nickname}</div>
+    <div className='scheduled-task'>
+      {props.nickname}
+      <button className='complete-extra-task' onClick={() => completeTask(props.task)}>Complete</button>
+    </div>
   )
 }
 // taskNickname: 'Clean Roads',

@@ -19,7 +19,9 @@ const ExtraTaskWindow = (props) => {
   }, [])
   // console.log(formattedTaskList)
   return (
-    <div id='extra-task-window'>{formattedTaskList}</div>
+    <div id='extra-task-window'>
+      {formattedTaskList}
+    </div>
   )
 }
 
