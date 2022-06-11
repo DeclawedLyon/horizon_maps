@@ -10,6 +10,7 @@ import ScheduleWindow from './components/schedule_components/ScheduleWindow';
 import UploadImagePopup from './components/popups/UploadImagePopup'
 import { useState } from 'react';
 import ExtraTaskWindow from './components/extra_task_components/ExtraTaskWindow';
+import BonusWork from './components/bonus_work_components/BonusWork';
 
 const NadenCutList = [
   {
@@ -888,6 +889,7 @@ const LOGIN = 'LOGIN';
 const MAP = 'MAP';
 const SCHEDULE = 'SCHEDULE';
 const EXTRA_TASKS = 'EXTRA_TASKS';
+const BONUS_WORK = 'BONUS_WORK'
 
 function App() {
   const devMode = false;
@@ -1020,6 +1022,9 @@ function App() {
       />}
       {mode === EXTRA_TASKS && <ExtraTaskWindow
         taskList={taskList}
+      />}
+      {mode === BONUS_WORK && <BonusWork
+        
       />}
       <BottomNav 
         setMode={setMode}

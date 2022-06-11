@@ -1,0 +1,8 @@
+#bonus-work-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: var(--nav-height);
+  height: calc(100vh - var(--nav-height) - var(--bottom-nav-height));
+  border: 2px solid black;
+}
