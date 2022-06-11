@@ -1,7 +1,9 @@
 #top-navbar {
   display: flex;
+  justify-content: space-between;
+  padding-inline: 0.5em;
   position: fixed;
-  justify-content: center;
+  /* justify-content: center; */
   top: 0;
   border: 2px solid rgb(255, 99, 99);
   width: 100vw;

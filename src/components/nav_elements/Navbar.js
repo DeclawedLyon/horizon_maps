@@ -5,12 +5,13 @@ export default function Navbar(props) {
   }
 
   return (
-    <nav id="top-navbar">
-      <ul id='navbar-menu'>
-        <li><button className='navbar-button' onClick={() =>{ /*props.setCutList(props.naden)*/ testClick()}}>Naden</button></li>
-        <li><button className='navbar-button' onClick={() => {/*props.setCutList(props.colville)*/ testClick()}}>Colville</button></li>
-      </ul>
+    <div id="top-navbar">
+      <img src='*' id='company-logo' alt='company logo'></img>
+      {/* <ul id='navbar-menu'>
+        <li><button className='navbar-button' onClick={() =>{ props.setCutList(props.naden) testClick()}}></button></li>
+        <li><button className='navbar-button' onClick={() => {props.setCutList(props.colville) testClick()}}>Colville</button></li>
+      </ul> */}
       <button style={{fontSize: '0.5em'}}>sidebar menu? || login/logout?</button>
-    </nav>
+    </div>
   )
 }

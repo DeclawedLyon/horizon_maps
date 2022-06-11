@@ -4,9 +4,7 @@ import mowIcon from '../../images/lawn_mower.png'
 import alert from '../../images/alert.png'
 
 const CutInterface = (props) => {
-  const completeCut = () => {
-    // console.log('cut!!')
-  }
+  
   return (
     <div className='cut-interface'>
       <h2>{props.cutName}</h2>

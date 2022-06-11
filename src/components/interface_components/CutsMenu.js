@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import DropdownMenu from '../ui_components/DropdownMenu'
 import CutInterface from './CutInterface'
 import './cutsMenu.css'
 
@@ -27,6 +28,9 @@ export default function CutsMenu(props) {
   }
   return (
     <div className='ui-menu'>
+      <DropdownMenu 
+        menuName="Group By:"
+      />
       {cuts}
     </div>
   )
